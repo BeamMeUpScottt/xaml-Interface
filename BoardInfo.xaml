@@ -1,0 +1,43 @@
+﻿<Page x:Class="PetShelterProject.BoardInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PetShelterProject"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="BoardInfo" Background="White">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="DogLogo.jpg" Opacity="0.1"/>
+        </Grid.Background>
+        <Label x:Name="BoardInfoLabel" Content="Please Enter Your Pet's Info:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="580" FontFamily="Myanmar Text" FontSize="20" FontWeight="Bold"/>
+
+        <Label x:Name="PetNameLabel" Content="Name:" HorizontalAlignment="Left" Margin="175,79,0,0" VerticalAlignment="Top" Width="64" FontFamily="Myanmar Text" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="PetNameTextbox" Height="23" Margin="300,82,156,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE" SelectionBrush="{x:Null}"/>
+
+        <Label x:Name="SpeciesLabel" Content="Species:" HorizontalAlignment="Left" Margin="167,125,0,0" VerticalAlignment="Top" Width="66" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="SpeciesTextbox" Height="23" Margin="300,128,156,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Myanmar Text" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE"/>
+
+        <Label x:Name="AgeLabel" Content="Age:" HorizontalAlignment="Left" Margin="190,171,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Myanmar Text" FontSize="14"/>
+        <TextBox x:Name="AgeTextBox" Height="23" Margin="300,176,250,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Myanmar Text" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE"/>
+
+        <Label x:Name="SexLabel" Content="Sex:" HorizontalAlignment="Left" Margin="193,217,0,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="MaleRB" Content="Male" HorizontalAlignment="Left" Margin="300,225,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="#FFAEAEAE" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="FemaleRB" Content="Female" HorizontalAlignment="Left" Margin="369,225,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="#FFAEAEAE" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Width="75"/>
+
+        <Label x:Name="WeightLabel" Content="Weight (lbs):" HorizontalAlignment="Left" Margin="135,263,0,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Width="97"/>
+        <TextBox x:Name="WeightTextBox" HorizontalAlignment="Left" Height="23" Margin="300,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE" SelectionBrush="{x:Null}" FontFamily="Myanmar Text"/>
+
+        <Button x:Name="SubmitButton" Content="Submit" Margin="250,329,250,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" Foreground="White" FontWeight="Bold" Height="24" Click="SubmitButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000D5D" Offset="1"/>
+                    <GradientStop Color="#FF1333FF"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Page>
