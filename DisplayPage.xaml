@@ -5,36 +5,62 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:PetShelterProject"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="600"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="DisplayPage" Background="White">
 
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="DogLogo.jpg" Opacity="0.1"/>
         </Grid.Background>
-        <Label x:Name="ViewPetsLabel" Content="Pets in Shelter" HorizontalContentAlignment="Center" Margin="334,16,50,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
-        <Label x:Name="PetsDisplayLabel" Content="" Margin="334,53,50,0" VerticalAlignment="Top" Height="274" BorderBrush="#FF9C9C9C" FontFamily="Myanmar Text" BorderThickness="1">
+        <Label x:Name="ViewPetsLabel" Content="Pets in Shelter" HorizontalContentAlignment="Center" Margin="553,16,50,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="PetsDisplayLabel" Content="" Margin="553,53,50,0" VerticalAlignment="Top" Height="389" BorderBrush="#FF9C9C9C" FontFamily="Myanmar Text" BorderThickness="1" FontSize="14">
             <Label.Background>
                 <SolidColorBrush Color="Gainsboro" Opacity="0.8"/>
             </Label.Background>
         </Label>
 
-        <Label x:Name="SortByLabel" Content="Sort By:" HorizontalAlignment="Left" Margin="30,53,0,0" VerticalAlignment="Top" Width="64" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Height="31"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="30,86,0,0" VerticalAlignment="Top" Width="120">
+        <Label x:Name="SortByLabel" Content="Sort By:" HorizontalAlignment="Left" Margin="400,53,0,0" VerticalAlignment="Top" Width="64" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Height="31"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="400,86,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Species"/>
             <ComboBoxItem Content="Age"/>
             <ComboBoxItem Content="Sex"/>
             <ComboBoxItem Content="Weight"/>
         </ComboBox>
 
-        <Label x:Name="RemoveNameLabel" Content="Please Type in a Name to Pick Up" HorizontalAlignment="Left" Margin="30,194,0,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
-        <TextBox x:Name="RemoveNameTextbox" HorizontalAlignment="Left" Height="23" Margin="30,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Background="#FFE4E2E2" BorderBrush="#FFA2A2A2" SelectionBrush="{x:Null}" FontFamily="Myanmar Text"/>
+        <Label x:Name="PickUpNameLabel" Content="Pick Up a Pet" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="43,358,0,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="20" FontWeight="Bold" Width="230"/>
+        <TextBox x:Name="RemoveNameTextbox" HorizontalAlignment="Left" Height="23" Margin="136,407,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Background="#FFF1F1F1" BorderBrush="#FFA2A2A2" SelectionBrush="{x:Null}" FontFamily="Myanmar Text"/>
 
-        <Button x:Name="BoardAnother" Content="Board Another?" Margin="71,310,381,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" Height="26" Click="BoardAnother_Click" FontWeight="Bold" Foreground="White">
+        <Label x:Name="EnterInfoLabel" Content="Please Enter Your Pet's Info:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="25,25,0,0" VerticalAlignment="Top" Width="301" FontFamily="Myanmar Text" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="PetNameLabel" Content="Name:" HorizontalAlignment="Left" Margin="61,71,0,0" VerticalAlignment="Top" Width="64" FontFamily="Myanmar Text" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="PetNameTextbox" Height="23" Margin="135,75,621,0" TextWrapping="Wrap" VerticalAlignment="Top" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE" SelectionBrush="{x:Null}"/>
+
+        <Label x:Name="SpeciesLabel" Content="Species:" HorizontalAlignment="Left" Margin="52,108,0,0" VerticalAlignment="Top" Width="66" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="SpeciesTextbox" Height="23" Margin="135,111,621,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Myanmar Text" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE"/>
+
+        <Label x:Name="AgeLabel" Content="Age:" HorizontalAlignment="Left" Margin="75,145,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Myanmar Text" FontSize="14"/>
+        <TextBox x:Name="AgeTextBox" Height="23" Margin="135,148,715,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Myanmar Text" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE"/>
+
+        <Label x:Name="SexLabel" Content="Sex:" HorizontalAlignment="Left" Margin="78,182,0,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="MaleRB" Content="Male" HorizontalAlignment="Left" Margin="135,190,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="#FFAEAEAE" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="FemaleRB" Content="Female" HorizontalAlignment="Left" Margin="205,190,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="#FFAEAEAE" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Width="75"/>
+
+        <Label x:Name="WeightLabel" Content="Weight (lbs):" HorizontalAlignment="Left" Margin="20,219,0,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Width="97"/>
+        <TextBox x:Name="WeightTextBox" HorizontalAlignment="Left" Height="23" Margin="135,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Background="#FFF1F1F1" BorderBrush="#FFAEAEAE" SelectionBrush="{x:Null}" FontFamily="Myanmar Text"/>
+
+        <Label x:Name="RemoveNameLabel" Content="Name:" HorizontalAlignment="Left" Margin="62,405,0,0" VerticalAlignment="Top" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="PickUpButton" Content="Pick Up" HorizontalAlignment="Left" Margin="112,464,0,0" VerticalAlignment="Top" Width="75" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Foreground="White" Height="26" Click="PickUpButton_Click">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF02116C" Offset="1"/>
-                    <GradientStop Color="#FF0A21B2"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF01177A" Offset="1"/>
+                    <GradientStop Color="#FF193DDD"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="SubmitButton" Content="Submit" HorizontalAlignment="Left" Margin="112,273,0,0" VerticalAlignment="Top" Width="75" Foreground="White" FontFamily="Myanmar Text" FontSize="14" FontWeight="Bold" Height="26" Click="SubmitButton_Click_1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF01187C" Offset="1"/>
+                    <GradientStop Color="#FF1435C6"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
